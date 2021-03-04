@@ -1,7 +1,7 @@
 import os, sys
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-activate_this = "%s/warch/venv/bin/activate_this.py" % basedir
+activate_this = "%s/warch/venv/Scripts/activate_this.py" % basedir
 with open(activate_this) as file_:
     exec(file_.read(), dict(__file__=activate_this))
 
