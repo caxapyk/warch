@@ -1,5 +1,7 @@
-from werkzeug.serving import run_simple
+from livereload import Server
 from wsgi import application
 
-run_simple('localhost', 5000, application,
-    use_reloader=True, use_debugger=True, use_evalex=True)
+
+if __name__ == '__main__':
+    server = Server(application)
+    server.serve(host='localhost', port=5000)
