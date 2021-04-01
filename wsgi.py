@@ -13,8 +13,10 @@ from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
 from warch_decision import app as decision_app
 from warch_registry import app as registry_app
+from warch_personalities import app as personalities_app
 
 application = DispatcherMiddleware(NotFound(), {
     '/_decision': decision_app.create_app(),
-    '/_registry': registry_app.create_app()
+    '/_registry': registry_app.create_app(),
+    '/_personalities': personalities_app.create_app()
 })

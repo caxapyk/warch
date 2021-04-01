@@ -2,5 +2,7 @@ from livereload import Server
 from wsgi import application
 
 
-server = Server(application)
-server.serve(host='localhost', port=5000)
+if __name__ == '__main__':
+    application.debug = True
+    server = Server(application)
+    server.serve(host='localhost', port=5000)
