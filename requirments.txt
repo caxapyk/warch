@@ -4,3 +4,5 @@ flask-sqlalchemy
 sqlalchemy
 mysqlclient
 wtforms
+python-docx
+docxtpl
